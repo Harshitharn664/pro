@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<h1>Update Record</h1>
+<form action="/edit" method="post" >
+<input type="text" name="id" th:value="${product.id}" hidden>
+Name: <input type="text" name="name" th:value="${product.name}" ><br><br>
+Description: <input type="text" name="description" th:value="${product.description}"><br><br>
+Image Link: <input type="text" name="imageLink" th:value="${product.imageLink}">
+<img height="100px" width="100px" th:src="${product.imageLink}" th:alt="${product.name}">
+<br><br>
+Price: <input type="text" name="price" th:value="${product.price}"><br><br>
+Category: <select name="category">
+<option>Clothing</option>
+<option>Electronics</option>
+<option>Cosemetics</option>
+<option>Others</option>
+</select>
+<br><br>
+
+<input type="submit" value="Update">
+</form>
+<br><br>
+<a href="/"><button>Back</button></a>
+</div>
+
+
+</body>
+</html>
